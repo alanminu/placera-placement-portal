@@ -1,16 +1,89 @@
-# React + Vite
+# Placera — Placement Preparation Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Placera is a web-based platform designed to help students prepare for placements by tracking subject-wise progress, managing interview experiences, and staying organized throughout the placement journey.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+https://placera-placement-portal.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Dashboard to monitor overall preparation progress
+* Subject-wise tracking for structured learning
+* Interview tracking integrated into the dashboard
+* Badge/achievement system for motivation
+* Login interface
+
+---
+
+## Tech Stack
+
+* React (Vite)
+* JavaScript
+* CSS
+
+---
+
+## Screenshots
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Subject Detail
+![Subject](./screenshots/subject.png)
+
+### Badges
+![Badges](./screenshots/badges.png)
+
+---
+
+## Project Structure
+
+```
+src/
+ ├── assets/
+ ├── components/
+ │    └── InterviewTracker.jsx
+ ├── pages/
+ │    ├── About.jsx
+ │    ├── Badges.jsx
+ │    ├── Dashboard.jsx
+ │    ├── Login.jsx
+ │    └── SubjectDetail.jsx
+ ├── App.jsx
+ ├── main.jsx
+```
+
+---
+
+## Run Locally
+
+Clone the repository and start the development server:
+
+```bash
+git clone https://github.com/alanminu/placera-placement-portal.git
+cd placera-placement-portal
+npm install
+npm run dev
+```
+
+---
+
+## Future Improvements
+
+* Backend integration 
+* Authentication 
+* Database integration 
+* Analytics dashboard with performance insights
+* UI/UX improvements and responsiveness
+
+---
+
+## Author
+
+Alan Minu
+https://github.com/alanminu
