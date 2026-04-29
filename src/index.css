@@ -1,0 +1,55 @@
+:root {
+  --primary: #4f46e5;
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --border: #e5e7eb;
+  --text-main: #111827;
+  --text-sub: #6b7280;
+  --radius: 8px;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text-main);
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.flat-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.progress-rail {
+  background: var(--border);
+  height: 8px;
+  border-radius: 10px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.progress-track {
+  background: var(--primary);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+.btn-solid {
+  background: var(--text-main);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+}
