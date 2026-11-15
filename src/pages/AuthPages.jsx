@@ -70,7 +70,7 @@ export function Login(themeProps) {
     >
       <form onSubmit={onSubmit} className="form">
         <Field label="Email">
-          <input type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@vitstudent.ac.in" required />
+          <input type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@example.com" required />
         </Field>
         <Field label="Password">
           <input type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} required />
@@ -141,7 +141,7 @@ export function Signup(themeProps) {
           <input value={form.college} onChange={set('college')} maxLength={120} />
         </Field>
         <Field label="Email">
-          <input type="email" value={form.email} onChange={set('email')} autoComplete="email" required />
+          <input type="email" value={form.email} onChange={set('email')} autoComplete="email" placeholder="name@example.com" required />
         </Field>
         <Field label="Password" hint="At least 8 characters.">
           <input type="password" value={form.password} onChange={set('password')} autoComplete="new-password" required />
