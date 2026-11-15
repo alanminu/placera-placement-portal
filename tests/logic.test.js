@@ -8,7 +8,7 @@ import { streaks, heatmapWeeks, tierProgress, achievements } from '../src/lib/st
 test('dates: adding days crosses months and years', () => {
   assert.equal(addDays('2026-01-30', 3), '2026-02-02');
   assert.equal(addDays('2026-12-31', 1), '2027-01-01');
-  assert.equal(addDays('2028-02-28', 1), '2028-02-29');
+  assert.equal(addDays('2024-02-28', 1), '2024-02-29');
   assert.equal(diffDays('2026-11-15', '2026-11-22'), 7);
   assert.equal(countdown('2026-11-16', '2026-11-15'), 'Tomorrow');
   assert.equal(countdown('2026-11-10', '2026-11-15'), '5 days ago');

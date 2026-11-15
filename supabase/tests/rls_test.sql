@@ -43,14 +43,14 @@ select pg_temp.act_as('00000000-0000-0000-0000-00000000000a');
 insert into public.subjects (name) values ('DBMS');
 insert into public.topics (subject_id, name)
   select id, 'Normalization' from public.subjects;
-insert into public.interviews (company) values ('PayPal');
+insert into public.interviews (company) values ('Acme Corp');
 insert into public.activity_log (kind, day) values ('topic_completed', current_date);
 insert into public.study_plans (title, start_on, target_date)
-  values ('PayPal prep', current_date, current_date + 7);
+  values ('Acme prep', current_date, current_date + 7);
 insert into public.plan_tasks (plan_id, topic_id, due_on)
   select p.id, t.id, current_date from public.study_plans p, public.topics t;
 insert into public.experiences (company, questions, is_anonymous)
-  values ('PayPal', 'Two sum, then LRU cache', true);
+  values ('Acme Corp', 'Two sum, then LRU cache', true);
 insert into public.experiences (company, questions, is_anonymous)
   values ('Zoho', 'SQL joins', false);
 
@@ -116,7 +116,7 @@ select pg_temp.must_fail(
 -- the wall: Bilal sees both posts, but the anonymous one has no author
 do $$ begin
   assert (select count(*) from public.experience_feed()) = 2, 'feed shows all posts';
-  assert (select author from public.experience_feed() where company = 'PayPal') is null,
+  assert (select author from public.experience_feed() where company = 'Acme Corp') is null,
     'anonymous post hides the author';
   assert (select author from public.experience_feed() where company = 'Zoho') = 'asha',
     'named post shows the username';
